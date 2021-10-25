@@ -1,0 +1,11 @@
+---
+ - name: creating backup
+   hosts: 192.168.204.129
+   tasks: 
+      - name: creating tar of tmp
+        archive:
+          path: /tmp
+          dest: /mnt/backup.tar.gz
+          format: gz
+          force_archive: true
+          tags: pavan  
